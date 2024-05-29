@@ -1,0 +1,52 @@
+*{
+  margin:0;
+  padding:0;
+  box-sizing: border-box;
+  font-family : Arial;
+  color : red;
+}
+
+body{
+  display : flex;
+  justify-content : center;
+  align-items : center;
+  min-height : 100vh;
+  background-color : #212121;
+}
+
+.container {
+  position : relative;
+}
+
+.clock {
+  background-color: #ffffc7;
+  width : 300px;
+  height : 300px;
+  border-radius : 150px;
+  border : 2px solid rgba(249, 2, 2, 0.4);
+  box-shadow : 0 0 30px rgba(61, 216, 97, 0.9);
+  display : flex;
+  justify-content : center;
+  align-items : center;
+}
+
+.clock > span {
+  position : absolute;
+  transform : rotate(calc(30deg * var(--i)));
+  inset : 8px;
+  text-align : center;
+}
+
+.clock > span > b {
+  transform : rotate(calc(-30deg * var(--i)));
+  display : inline-block;
+}
+
+.clock::before {
+  content : '';
+  position : absolute;
+  width : 8px;
+  height : 8px;
+  border-radius : 50%;
+  background-color : red;
+}
